@@ -1,9 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chbelan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/01/28 17:01:19 by chbelan           #+#    #+#             */
+/*   Updated: 2019/01/28 19:46:20 by chbelan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./include/ft.h"
 
 int	main(void)
 {
-	ft_printf("%d",42);
-	//ft_printf("%s %c %s %b\n", "El matador Cavani", 42, 27);
-	//ft_printf("Numbers serie -> %d %d %d %d\n", 64, 256, 1024, 4096);
+	ft_printf("s->%s\n", "salut");
+	ft_printf("c-> %c\n", 'c');
+	ft_printf("b-> %b\n", 89);
+	ft_printf("d-> %d\n", 4096);
+	ft_printf("x-> %x\n", "EF6");
+	ft_printf("o-> %o\n", 217);
 	return (0);
 }

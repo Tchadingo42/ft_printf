@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tools.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chbelan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/01/28 17:01:43 by chbelan           #+#    #+#             */
+/*   Updated: 2019/01/28 18:52:00 by chbelan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include "./include/ft_printf.h"
-#define bin "01"
+#define BIN "01"
 
-void		ft_putchar(char c)
+void			ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void		ft_putnbr(int nb)
+void			ft_putnbr(int nb)
 {
 	if (nb < 0)
 	{
@@ -22,9 +34,9 @@ void		ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 }
 
-void		ft_putstr(char *str)
+void			ft_putstr(char *str)
 {
-	int	i;
+	int			i;
 
 	i = 0;
 	while (str[i])
@@ -34,9 +46,9 @@ void		ft_putstr(char *str)
 	}
 }
 
-int		ft_strlen(char *str)
+int				ft_strlen(char *str)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str[i])
@@ -46,12 +58,12 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-void	ft_putnbr_bin(unsigned int nb)
+void			ft_putnbr_bin(unsigned int nb)
 {
-	int 	size;
+	int			size;
 
 	size = 2;
 	if (nb > 1)
-	ft_putnbr_bin(nb/size);
-	ft_putchar(bin[nb % size]);
+		ft_putnbr_bin(nb / size);
+	ft_putchar(BIN[nb % size]);
 }
